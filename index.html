@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcards Study App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>📚 Flashcards Study App</h1>
+      <button id="newDeckBtn">+ New Deck</button>
+    </header>
+
+    <div class="container">
+      <aside>
+        <h2>My Decks</h2>
+        <div id="deckList"></div>
+      </aside>
+
+      <main>
+        <h2 id="deckTitle">Select a Deck</h2>
+
+        <div class="toolbar">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search flashcards..."
+            aria-label="Search flashcards"
+          />
+          <button id="shuffleBtn">Shuffle</button>
+          <button id="newCardBtn">+ New Card</button>
+        </div>
+
+        <div
+          class="flashcard"
+          id="flashcard"
+          tabindex="0"
+          role="button"
+          aria-label="Flashcard. Press Enter or Space to flip"
+        >
+          <div id="cardContent">Create a deck to get started!</div>
+        </div>
+
+        <div class="controls">
+          <button id="prevBtn">Previous</button>
+          <button id="flipBtn">Flip Card</button>
+          <button id="nextBtn">Next</button>
+        </div>
+
+        <p id="progress">0 / 0</p>
+      </main>
+    </div>
+
+    <footer>
+      <p>Study smarter, one card at a time!</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

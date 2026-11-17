@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #263247;
+  min-height: 100vh;
+}
+
+header {
+  background: #5146d8;
+  color: white;
+  padding: 22px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+button {
+  background: #5146d8;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #3930ad;
+}
+
+button:focus-visible,
+input:focus-visible,
+.flashcard:focus-visible {
+  outline: 3px solid #f0a52b;
+  outline-offset: 3px;
+}
+
+header button {
+  background: white;
+  color: #5146d8;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 25px;
+  padding: 30px 5%;
+  min-height: 75vh;
+}
+
+aside {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+aside h2 {
+  margin-bottom: 20px;
+}
+
+.deck-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f0efff;
+}
+
+.deck-item.active {
+  background: #5146d8;
+  color: white;
+}
+
+main {
+  text-align: center;
+}
+
+main h2 {
+  margin: 10px 0 25px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#searchInput {
+  min-width: 220px;
+}
+
+.flashcard {
+  background: white;
+  max-width: 600px;
+  min-height: 280px;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #00000012;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flashcard.is-flipped {
+  background: #eae8ff;
+  transform: rotateY(5deg);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+#progress {
+  color: #777;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar input,
+  .toolbar button {
+    width: 100%;
+  }
+
+  .flashcard {
+    min-height: 230px;
+    font-size: 21px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #171923;
+    color: #f1f1f1;
+  }
+
+  aside,
+  .flashcard {
+    background: #252938;
+    color: white;
+  }
+
+  .deck-item {
+    background: #343047;
+  }
+
+  .deck-item.active {
+    background: #5146d8;
+  }
+
+  .flashcard.is-flipped {
+    background: #383452;
+  }
+
+  input {
+    background: #252938;
+    color: white;
+    border-color: #555;
+  }
+}
